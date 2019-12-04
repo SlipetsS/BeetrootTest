@@ -1,0 +1,54 @@
+/*!
+Theme Name: Beetroot
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: beetroot
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Beetroot is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+@import "compass";
+@import "compass/reset";
+
+// Здесь мы импортируем наши частичные шаблоны
+@import "_partials/mixins";
+@import "_partials/variables";
+@import "_partials/typography";
+
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+}
+header {
+  background-color: $header-color;
+}
+.nav-menu li a {
+
+}
+.nav-menu{
+   li{
+     //display: inline-block;
+     a {
+       color: #7d6378;
+       font-size: 32px;
+       font-family: Roboto;
+     }
+   }
+}
+
