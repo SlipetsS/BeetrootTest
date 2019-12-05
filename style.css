@@ -20,6 +20,71 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+/* line 5, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby26-x64/lib/ruby/gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 /* ðóðÁð║ÐüÐéð¥ð▓Ðïð╣ ÐüÐéð©ð╗Ðî ð¥Ðüð¢ð¥ð▓ð¢ð¥ð╣ Ðçð░ÐüÐéð© */
 /* line 33, sass/style.scss */
 body {
@@ -518,14 +583,14 @@ footer p {
 
 /*----------Media Styles-----------*/
 @media (max-width: 1200px) {
-  /* line 571, sass/style.scss */
+  /* line 570, sass/style.scss */
   h1 {
     line-height: normal;
     letter-spacing: normal;
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
-  /* line 576, sass/style.scss */
+  /* line 575, sass/style.scss */
   h2 {
     font-size: 2.5rem;
     line-height: normal;
@@ -534,108 +599,118 @@ footer p {
   }
 
   /*------Header Styles-----*/
-  /* line 585, sass/style.scss */
+  /* line 584, sass/style.scss */
   header {
     padding-left: 20px;
     padding-right: 20px;
   }
 
   /*------Form Styles-----*/
-  /* line 590, sass/style.scss */
+  /* line 589, sass/style.scss */
   .wpcf7 {
     padding: 20px;
   }
-  /* line 593, sass/style.scss */
+  /* line 592, sass/style.scss */
   .wpcf7 h2 {
     font-size: 2rem;
   }
-  /* line 599, sass/style.scss */
+  /* line 598, sass/style.scss */
   .wpcf7 form .form-part__line {
     display: flex;
     flex-direction: column;
   }
-  /* line 603, sass/style.scss */
+  /* line 602, sass/style.scss */
   .wpcf7 form .form-part__line input, .wpcf7 form .form-part__line select {
     min-width: 100%;
   }
-  /* line 607, sass/style.scss */
+  /* line 606, sass/style.scss */
   .wpcf7 form .form-part__line input {
     margin-right: 30px;
   }
-  /* line 612, sass/style.scss */
+  /* line 611, sass/style.scss */
   .wpcf7 form .form-part__columns {
     flex-direction: column;
   }
-  /* line 615, sass/style.scss */
+  /* line 614, sass/style.scss */
   .wpcf7 form .form-part__columns .right-part {
     flex-basis: 100%;
   }
-  /* line 618, sass/style.scss */
+  /* line 617, sass/style.scss */
   .wpcf7 form .form-part__columns .left-part {
     flex-basis: 100%;
     margin-right: 0;
   }
 
   /*------Agenda Styles-----*/
-  /* line 629, sass/style.scss */
+  /* line 628, sass/style.scss */
   .agenda .agenda__inner {
     display: block;
     padding: 20px;
   }
-  /* line 633, sass/style.scss */
+  /* line 632, sass/style.scss */
   .agenda .agenda__inner .agenda-one-info {
     width: 100% !important;
     margin-bottom: 20px;
   }
-  /* line 637, sass/style.scss */
+  /* line 636, sass/style.scss */
   .agenda .agenda__inner h2 {
     margin-bottom: 20px;
   }
 }
 @media (max-width: 640px) {
+  /* line 647, sass/style.scss */
+  h1 {
+    font-size: 3rem;
+  }
+
+  /* line 650, sass/style.scss */
+  h2 {
+    font-size: 2.5rem;
+  }
+
   /*------Hero Info Styles-----*/
-  /* line 652, sass/style.scss */
+  /* line 656, sass/style.scss */
   .hero-info h2 {
     font-size: 3.75rem;
     letter-spacing: normal;
     margin-bottom: 20px;
   }
-  /* line 658, sass/style.scss */
+  /* line 662, sass/style.scss */
   .hero-info h3 {
     font-size: 2.4rem;
   }
-  /* line 662, sass/style.scss */
+  /* line 666, sass/style.scss */
   .hero-info h5 span {
     font-size: 1.5rem;
   }
 
   /*------Agenda Styles-----*/
-  /* line 669, sass/style.scss */
+  /* line 673, sass/style.scss */
   .agenda {
     padding: 20px 0 80px 0;
   }
 
   /*------Header Styles-----*/
-  /* line 677, sass/style.scss */
+  /* line 681, sass/style.scss */
   header .header__inner {
     flex-direction: column;
   }
-  /* line 680, sass/style.scss */
+  /* line 684, sass/style.scss */
   header .header__inner .site-branding {
     flex: 100%;
     text-align: center;
   }
-  /* line 685, sass/style.scss */
+  /* line 689, sass/style.scss */
   header .header__inner .main-navigation {
     flex: 100%;
   }
 
   /*------Footer Styles-----*/
-  /* line 693, sass/style.scss */
+  /* line 697, sass/style.scss */
   footer {
     padding: 30px 10px;
   }
-  /* line 695, sass/style.scss */
+  /* line 699, sass/style.scss */
   footer p {
     font-size: 1rem;
   }

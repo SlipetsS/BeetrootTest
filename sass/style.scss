@@ -19,8 +19,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-//@import "compass";
-//@import "compass/reset";
+@import "compass";
+@import "compass/reset";
 
 @import "_partials/mixins";
 @import "_partials/variables";
@@ -567,11 +567,10 @@ $breakpoint-tablet: 768px;
 $breakpoint-mobile: 640px;
 
 @media (max-width: $breakpoint-device) {
-
   h1 {
     line-height: normal;
     letter-spacing: normal;
-    font-size: 3rem;
+    font-size: 5rem;
   }
   h2 {
     //font-size: 40px;
@@ -640,13 +639,18 @@ $breakpoint-mobile: 640px;
     }
   }
 
-
 }
 
 
 @media (max-width: $breakpoint-mobile) {
 
-
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    //font-size: 40px;
+    font-size: 2.5rem;
+  }
   /*------Hero Info Styles-----*/
   .hero-info  {
     h2 {

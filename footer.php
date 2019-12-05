@@ -18,17 +18,6 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<script>
-    jQuery(document).ready(function($) {
-        $(window).bind("scroll", function() {
-            if ($(this).scrollTop() > 320) {
-                $(".agenda-one-info").addClass('show')
-            } else {
-                $(".agenda-one-info").removeClass('show')
-            }
-        });
-    });
-</script>
 <?php wp_footer(); ?>
 
 </body>
