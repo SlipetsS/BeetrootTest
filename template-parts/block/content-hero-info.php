@@ -31,9 +31,9 @@ $bg = get_field('background');
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="hero-info <?php echo esc_attr($className); ?>" style=" background-image: url('<?php echo $bg; ?>'); ">
 <div class="hero-info__inner">
-    <h2>
+    <h1>
         <?php echo $title ?: __('Title here'); ?>
-    </h2>
+    </h1>
     <h3>
         <?php echo $subtitle ?: __('Sub Title here'); ?>
     </h3>

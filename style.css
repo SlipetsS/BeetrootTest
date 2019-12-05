@@ -86,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* ðóðÁð║ÐüÐéð¥ð▓Ðïð╣ ÐüÐéð©ð╗Ðî ð¥Ðüð¢ð¥ð▓ð¢ð¥ð╣ Ðçð░ÐüÐéð© */
-/* line 43, sass/style.scss */
+/* line 33, sass/style.scss */
 body {
   color: black;
   font-size: 16px;
@@ -95,13 +95,25 @@ body {
   line-height: 1.6;
 }
 
-/* line 50, sass/style.scss */
+/* line 40, sass/style.scss */
 a {
   text-decoration: none;
   text-underline: none;
 }
 
-/* line 55, sass/style.scss */
+/* line 45, sass/style.scss */
+h1 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 118px;
+  font-weight: 900;
+  letter-spacing: 75px;
+  line-height: 85px;
+}
+
+/* line 56, sass/style.scss */
 h2 {
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -110,44 +122,44 @@ h2 {
   line-height: 60px;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 20px;
-  margin-bottom: 80px;
+  letter-spacing: 17px;
+  margin-bottom: 90px;
 }
 
 /*-------Header Styles-------*/
-/* line 69, sass/style.scss */
+/* line 70, sass/style.scss */
 header {
   background-color: #ffcc33;
   padding: 32px 0;
   border-bottom: 6px solid #d29b0c;
 }
-/* line 74, sass/style.scss */
+/* line 75, sass/style.scss */
 header .header__inner {
   max-width: 1420px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
-/* line 80, sass/style.scss */
+/* line 81, sass/style.scss */
 header .header__inner .site-branding {
   flex: 30%;
 }
-/* line 83, sass/style.scss */
+/* line 84, sass/style.scss */
 header .header__inner .main-navigation {
   flex: 70%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 /*-------Header Menu Styles-------*/
-/* line 96, sass/style.scss */
+/* line 97, sass/style.scss */
 .nav-menu li {
   display: inline-block;
   margin: 0 14px;
   position: relative;
 }
-/* line 101, sass/style.scss */
+/* line 102, sass/style.scss */
 .nav-menu li a {
   font-size: 32px;
   font-family: "Roboto", sans-serif;
@@ -156,7 +168,7 @@ header .header__inner .main-navigation {
   position: relative;
   text-decoration: none;
 }
-/* line 109, sass/style.scss */
+/* line 110, sass/style.scss */
 .nav-menu li a:before, .nav-menu li a:after {
   content: '';
   position: absolute;
@@ -166,41 +178,41 @@ header .header__inner .main-navigation {
   height: 3px;
   background-color: #a51440;
 }
-/* line 120, sass/style.scss */
+/* line 121, sass/style.scss */
 .nav-menu li a:hover {
   color: #a51440;
 }
-/* line 123, sass/style.scss */
+/* line 124, sass/style.scss */
 .nav-menu li a:before {
   opacity: 0;
   transform: translateY(-8px);
   transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
 }
-/* line 128, sass/style.scss */
+/* line 129, sass/style.scss */
 .nav-menu li a:after {
   opacity: 0;
   transform: translateY(4px);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 }
-/* line 135, sass/style.scss */
+/* line 136, sass/style.scss */
 .nav-menu li a:hover:before, .nav-menu li a:hover:after, .nav-menu li a:focus:before, .nav-menu li a:focus:after {
   color: #a51440;
   opacity: 1;
   transform: translateY(0);
 }
-/* line 141, sass/style.scss */
+/* line 142, sass/style.scss */
 .nav-menu li a:hover:before, .nav-menu li a:focus:before {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 }
-/* line 144, sass/style.scss */
+/* line 145, sass/style.scss */
 .nav-menu li a:hover:after, .nav-menu li a:focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
-/* line 154, sass/style.scss */
+/* line 155, sass/style.scss */
 .nav-menu .current_page_item a {
   color: #a51440;
 }
-/* line 157, sass/style.scss */
+/* line 158, sass/style.scss */
 .nav-menu .current_page_item a:after {
   content: '';
   position: absolute;
@@ -212,22 +224,22 @@ header .header__inner .main-navigation {
   opacity: 1;
   transform: translateY(0);
 }
-/* line 172, sass/style.scss */
+/* line 173, sass/style.scss */
 .nav-menu .current_page_item a:hover:before {
   display: none;
   opacity: 0;
 }
 
-/* line 182, sass/style.scss */
+/* line 183, sass/style.scss */
 .menu-toggle {
   display: none;
 }
 
 /*-----Hero Info Section*/
-/* line 187, sass/style.scss */
+/* line 188, sass/style.scss */
 .hero-info {
   position: relative;
-  padding: 160px 0;
+  padding: 175px 0 180px 0;
   text-align: center;
   height: 100%;
   background-attachment: fixed;
@@ -235,12 +247,12 @@ header .header__inner .main-navigation {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 197, sass/style.scss */
+/* line 198, sass/style.scss */
 .hero-info .hero-info__inner {
   max-width: 1024px;
   margin: 0 auto;
 }
-/* line 202, sass/style.scss */
+/* line 203, sass/style.scss */
 .hero-info:after {
   content: "";
   position: absolute;
@@ -251,7 +263,7 @@ header .header__inner .main-navigation {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-/* line 213, sass/style.scss */
+/* line 214, sass/style.scss */
 .hero-info * {
   z-index: 10;
   font-family: "Roboto", sans-serif;
@@ -260,28 +272,24 @@ header .header__inner .main-navigation {
   text-transform: uppercase;
   font-style: normal;
 }
-/* line 222, sass/style.scss */
-.hero-info h2 {
-  font-size: 118px;
-  font-weight: 900;
-  letter-spacing: 60px;
-  margin-bottom: 40px;
-  line-height: 85px;
-  text-shadow: 7px 4px 2px rgba(0, 0, 0, 0.29);
+/* line 223, sass/style.scss */
+.hero-info h1 {
+  margin-bottom: 46px;
+  text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.29);
 }
-/* line 231, sass/style.scss */
+/* line 228, sass/style.scss */
 .hero-info h3 {
   font-size: 71px;
   font-weight: 300;
   line-height: 54px;
-  margin-bottom: 40px;
-  text-shadow: 7px 4px 2px rgba(0, 0, 0, 0.29);
+  margin-bottom: 30px;
+  text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.29);
 }
-/* line 239, sass/style.scss */
+/* line 236, sass/style.scss */
 .hero-info h5 {
   text-align: center;
 }
-/* line 242, sass/style.scss */
+/* line 239, sass/style.scss */
 .hero-info h5 span {
   font-size: 48px;
   font-weight: 900;
@@ -289,15 +297,15 @@ header .header__inner .main-navigation {
   background: url("images/map-icon.png") no-repeat left center;
   padding-left: 94px;
   display: inline-block;
-  letter-spacing: 12px;
+  letter-spacing: 8px;
 }
 
 /*---------Map Styles---------------*/
-/* line 260, sass/style.scss */
+/* line 257, sass/style.scss */
 .map {
   position: relative;
 }
-/* line 263, sass/style.scss */
+/* line 260, sass/style.scss */
 .map h2 {
   color: #df6186;
   position: absolute;
@@ -308,18 +316,18 @@ header .header__inner .main-navigation {
 }
 
 /*---------Style for Forms---------------*/
-/* line 277, sass/style.scss */
+/* line 274, sass/style.scss */
 .wpcf7 {
   background: #90d6be;
   padding: 45px 0 61px 0;
   position: relative;
 }
-/* line 283, sass/style.scss */
+/* line 280, sass/style.scss */
 .wpcf7 * {
   z-index: 10;
   position: relative;
 }
-/* line 288, sass/style.scss */
+/* line 285, sass/style.scss */
 .wpcf7:before {
   content: "";
   position: absolute;
@@ -331,26 +339,26 @@ header .header__inner .main-navigation {
   clip-path: polygon(0 24%, 100% 1%, 100% 100%, 0% 100%);
   z-index: 1;
 }
-/* line 301, sass/style.scss */
+/* line 298, sass/style.scss */
 .wpcf7 form {
   max-width: 1420px;
   margin: 0 auto;
 }
-/* line 305, sass/style.scss */
+/* line 302, sass/style.scss */
 .wpcf7 form .form-part__line {
   display: flex;
   flex-direction: row;
 }
-/* line 309, sass/style.scss */
+/* line 306, sass/style.scss */
 .wpcf7 form .form-part__line input, .wpcf7 form .form-part__line select {
   min-width: 453px;
   position: relative;
 }
-/* line 314, sass/style.scss */
+/* line 311, sass/style.scss */
 .wpcf7 form .form-part__line input {
   margin-right: 30px;
 }
-/* line 318, sass/style.scss */
+/* line 315, sass/style.scss */
 .wpcf7 form .form-part__line select {
   background: white url("images/arrow-drop.png") no-repeat 90% center;
   appearance: none;
@@ -360,13 +368,13 @@ header .header__inner .main-navigation {
   text-indent: 0.01px;
   text-overflow: "";
 }
-/* line 330, sass/style.scss */
+/* line 327, sass/style.scss */
 .wpcf7 form .wpcf7-form-control-wrap {
   margin: 0 0 52px 0;
   display: flex;
   line-height: 1px;
 }
-/* line 336, sass/style.scss */
+/* line 333, sass/style.scss */
 .wpcf7 form input, .wpcf7 form select {
   border: 2px solid #cccccc;
   height: 99px;
@@ -382,29 +390,29 @@ header .header__inner .main-navigation {
   font-size: 24px;
   font-family: "Roboto", sans-serif;
 }
-/* line 352, sass/style.scss */
+/* line 349, sass/style.scss */
 .wpcf7 form input:focus, .wpcf7 form select:focus {
   border-color: #479fdf;
 }
-/* line 358, sass/style.scss */
+/* line 355, sass/style.scss */
 .wpcf7 form input[type=submit] {
   background: #e06287;
   color: #fff;
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 365, sass/style.scss */
+/* line 362, sass/style.scss */
 .wpcf7 form br {
   display: none;
 }
-/* line 369, sass/style.scss */
+/* line 366, sass/style.scss */
 .wpcf7 form option {
   color: #999999;
   text-transform: uppercase;
   font-size: 24px;
   font-family: "Roboto", sans-serif;
 }
-/* line 376, sass/style.scss */
+/* line 373, sass/style.scss */
 .wpcf7 form span.wpcf7-not-valid-tip {
   font-size: 16px;
   font-weight: 500;
@@ -413,7 +421,7 @@ header .header__inner .main-navigation {
   bottom: -20px;
   text-transform: uppercase;
 }
-/* line 386, sass/style.scss */
+/* line 383, sass/style.scss */
 .wpcf7 form textarea {
   padding: 28px;
   border-radius: 8px;
@@ -426,47 +434,47 @@ header .header__inner .main-navigation {
   font-family: "Roboto", sans-serif;
   background: #fff;
 }
-/* line 398, sass/style.scss */
+/* line 395, sass/style.scss */
 .wpcf7 form textarea:focus {
   border-color: #479fdf;
 }
-/* line 404, sass/style.scss */
+/* line 401, sass/style.scss */
 .wpcf7 form .form-part__columns {
   display: flex;
   flex-direction: row;
 }
-/* line 408, sass/style.scss */
+/* line 405, sass/style.scss */
 .wpcf7 form .form-part__columns .left-part {
   margin-right: 30px;
 }
-/* line 412, sass/style.scss */
+/* line 409, sass/style.scss */
 .wpcf7 form .form-part__columns .left-part, .wpcf7 form .form-part__columns .right-part {
   flex-basis: 50%;
 }
 
-/* line 423, sass/style.scss */
+/* line 420, sass/style.scss */
 div.wpcf7-validation-errors {
   display: none !important;
 }
 
-/* line 427, sass/style.scss */
+/* line 424, sass/style.scss */
 form.invalid .wpcf7-not-valid {
   color: #cc6699;
   border-color: #cc6699;
 }
-/* line 432, sass/style.scss */
+/* line 429, sass/style.scss */
 form.invalid input::placeholder,
 form.invalid textarea::placeholder {
   color: #cc6699;
 }
 
-/* line 438, sass/style.scss */
+/* line 435, sass/style.scss */
 *:focus {
   outline: none;
 }
 
 /*--------Style for placeholder----------*/
-/* line 444, sass/style.scss */
+/* line 441, sass/style.scss */
 input::placeholder,
 textarea::placeholder {
   color: #999999;
@@ -475,20 +483,20 @@ textarea::placeholder {
   font-family: "Roboto", sans-serif;
 }
 
-/* line 453, sass/style.scss */
+/* line 450, sass/style.scss */
 .agenda {
   background: #df6186;
-  padding: 86px 0;
+  padding: 90px 0 130px 0;
   position: relative;
 }
-/* line 459, sass/style.scss */
+/* line 456, sass/style.scss */
 .agenda .agenda__inner {
   max-width: 1420px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
-/* line 465, sass/style.scss */
+/* line 462, sass/style.scss */
 .agenda .agenda__inner h5 {
   font-size: 36px;
   line-height: 26px;
@@ -496,40 +504,40 @@ textarea::placeholder {
   font-weight: 900;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 37px;
+  margin-bottom: 32px;
   text-align: center;
 }
-/* line 476, sass/style.scss */
+/* line 473, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  padding: 28px 24px 72px 36px;
+  padding: 37px 24px 72px 36px;
   margin-right: 30px;
   box-sizing: border-box;
   box-shadow: 7px 4px 8px rgba(0, 0, 0, 0.29);
   opacity: 0;
   transition: all 0.9s ease-in 0s;
 }
-/* line 490, sass/style.scss */
+/* line 484, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:first-child {
   background: #90d6be;
 }
-/* line 493, sass/style.scss */
+/* line 487, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:nth-child(2) {
   background: #479fdf;
 }
-/* line 497, sass/style.scss */
+/* line 491, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:first-child, .agenda .agenda__inner .agenda-one-info:nth-child(2) {
   width: 25%;
 }
-/* line 500, sass/style.scss */
+/* line 494, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:last-child {
   width: 50%;
   background: #f1b928;
   margin-right: 0;
 }
-/* line 506, sass/style.scss */
+/* line 500, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info li {
   color: #3d3935;
   margin-bottom: 16px;
@@ -540,7 +548,7 @@ textarea::placeholder {
   hyphenate-limit-chars: 10 4 4;
   word-wrap: break-word;
 }
-/* line 516, sass/style.scss */
+/* line 510, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info li:before {
   content: '';
   width: 10px;
@@ -551,18 +559,18 @@ textarea::placeholder {
   top: 50%;
   margin: -5px  0 0 -5px;
 }
-/* line 529, sass/style.scss */
+/* line 523, sass/style.scss */
 .agenda .agenda__inner .show {
   opacity: 1;
 }
 
 /*----------Footer Styles-----------*/
-/* line 539, sass/style.scss */
+/* line 533, sass/style.scss */
 footer {
   background: #f1b928;
-  padding: 75px 0;
+  padding: 67px 0;
 }
-/* line 543, sass/style.scss */
+/* line 537, sass/style.scss */
 footer p {
   text-align: center;
   text-transform: uppercase;
@@ -574,70 +582,74 @@ footer p {
 
 /*----------Media Styles-----------*/
 @media (max-width: 640px) {
-  /* line 569, sass/style.scss */
-  .hero-info h2 {
-    font-size: 60px;
-    letter-spacing: normal;
-  }
-
-  /* line 576, sass/style.scss */
+  /* line 561, sass/style.scss */
   h2 {
     font-size: 40px;
     line-height: normal;
     letter-spacing: normal;
   }
 
-  /* line 586, sass/style.scss */
+  /*------Hero Info Styles-----*/
+  /* line 569, sass/style.scss */
+  .hero-info h2 {
+    font-size: 60px;
+    letter-spacing: normal;
+  }
+
+  /*------Form Styles-----*/
+  /* line 579, sass/style.scss */
   .wpcf7 form {
     padding: 0 20px;
   }
-  /* line 589, sass/style.scss */
+  /* line 582, sass/style.scss */
   .wpcf7 form .form-part__line {
     display: flex;
     flex-direction: column;
   }
-  /* line 593, sass/style.scss */
+  /* line 586, sass/style.scss */
   .wpcf7 form .form-part__line input, .wpcf7 form .form-part__line select {
     min-width: 100%;
   }
-  /* line 597, sass/style.scss */
+  /* line 590, sass/style.scss */
   .wpcf7 form .form-part__line input {
     margin-right: 30px;
   }
-  /* line 602, sass/style.scss */
+  /* line 595, sass/style.scss */
   .wpcf7 form .form-part__columns {
     flex-direction: column;
   }
-  /* line 605, sass/style.scss */
+  /* line 598, sass/style.scss */
   .wpcf7 form .form-part__columns .right-part {
     flex-basis: 100%;
   }
-  /* line 608, sass/style.scss */
+  /* line 601, sass/style.scss */
   .wpcf7 form .form-part__columns .left-part {
     flex-basis: 100%;
     margin-right: 0;
   }
 
-  /* line 624, sass/style.scss */
+  /*------Header Styles-----*/
+  /* line 611, sass/style.scss */
   header .header__inner {
     flex-direction: column;
   }
-  /* line 627, sass/style.scss */
+  /* line 614, sass/style.scss */
   header .header__inner .site-branding {
     flex: 100%;
     text-align: center;
   }
-  /* line 632, sass/style.scss */
+  /* line 619, sass/style.scss */
   header .header__inner .main-navigation {
     flex: 100%;
   }
 
-  /* line 642, sass/style.scss */
+  /*------Agenda Styles-----*/
+  /* line 629, sass/style.scss */
   .agenda .agenda__inner {
     display: block;
     padding: 20px;
   }
-  /* line 646, sass/style.scss */
+  /* line 633, sass/style.scss */
   .agenda .agenda__inner .agenda-one-info {
     width: 100% !important;
     margin-bottom: 20px;
