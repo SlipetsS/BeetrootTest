@@ -122,7 +122,10 @@ add_action( 'widgets_init', 'beetroot_widgets_init' );
 function beetroot_scripts() {
 	wp_enqueue_style( 'beetroot-style', get_stylesheet_uri() );
 
+
 	wp_enqueue_script( 'beetroot-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.js', array(), '20151215', true );
+
 
 	wp_enqueue_script( 'beetroot-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -177,7 +180,7 @@ function my_acf_init() {
             'keywords'			=> array( 'testimonial', 'quote' ),
         ));
 
-        // register a testimonial block
+        // register a footer block
         acf_register_block(array(
             'name'				=> 'footer',
             'title'				=> __('Footer'),
@@ -186,6 +189,40 @@ function my_acf_init() {
             'category'			=> 'formatting',
             'icon'				=> 'admin-comments',
             'keywords'			=> array( 'footer', 'quote' ),
+        ));
+
+
+        // register a hero block
+        acf_register_block(array(
+            'name'				=> 'hero-info',
+            'title'				=> __('Hero Info'),
+            'description'		=> __('A custom hero-info block.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'hero-info', 'quote' ),
+        ));
+
+        // register a agenda block
+        acf_register_block(array(
+            'name'				=> 'agenda',
+            'title'				=> __('Agenda'),
+            'description'		=> __('A custom agenda block.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'agenda', 'quote' ),
+        ));
+
+        // register a map block
+        acf_register_block(array(
+            'name'				=> 'map',
+            'title'				=> __('Map'),
+            'description'		=> __('A custom map block.'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+            'category'			=> 'formatting',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'map', 'quote' ),
         ));
 
 
@@ -217,11 +254,6 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'		=> false
     ));
 
-    acf_add_options_sub_page(array(
-        'page_title' 	=> 'Theme Header Settings',
-        'menu_title'	=> 'Header',
-        'parent_slug'	=> 'theme-general-settings',
-    ));
 
     acf_add_options_sub_page(array(
         'page_title' 	=> 'Theme Footer Settings',

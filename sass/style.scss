@@ -22,10 +22,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "compass";
 @import "compass/reset";
 
-// Здесь мы импортируем наши частичные шаблоны
 @import "_partials/mixins";
 @import "_partials/variables";
 @import "_partials/typography";
+
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+$base-font-family: 'Roboto', sans-serif;
+$border-radius: 8px;
+$red: #a51440;
+$brown: #7d6378;
+$whitey: #f0f0f0;
+
+
+
 
 
 body {
@@ -35,20 +47,608 @@ body {
   font-weight: $base-font-weight;
   line-height: 1.6;
 }
+a {
+  text-decoration: none;
+  text-underline: none;
+}
+
+h2 {
+  color: #fff;
+  font-family: $base-font-family;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 20px;
+  margin-bottom: 80px;
+}
+
+
+/*-------Header Styles-------*/
 header {
   background-color: $header-color;
-}
-.nav-menu li a {
+  padding: 32px 0;
+  border-bottom: 6px solid #d29b0c;
+
+  .header__inner {
+    max-width: 1420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+
+    .site-branding {
+      flex: 30%;
+    }
+    .main-navigation {
+      flex: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
 }
-.nav-menu{
-   li{
-     //display: inline-block;
+
+
+/*-------Header Menu Styles-------*/
+.nav-menu {
+   li {
+     display: inline-block;
+     margin: 0 14px;
+     position: relative;
+
      a {
-       color: #7d6378;
        font-size: 32px;
-       font-family: Roboto;
+       font-family: $base-font-family;
+       text-transform: lowercase;
+       color: $brown;
+       position: relative;
+       text-decoration: none;
+
+       &:before,
+       &:after {
+         content: '';
+         position: absolute;
+         bottom: -3px;
+         left: 0;
+         right: 0;
+         height: 3px;
+         background-color: $red;
+       }
+
+       &:hover {
+         color: $red;
+       }
+       &:before {
+         opacity: 0;
+         transform: translateY(- $distance);
+         transition: transform 0s $easeOutBack, opacity 0s;
+       }
+       &:after {
+         opacity: 0;
+         transform: translateY($distance/2);
+         transition: transform $duration $easeOutBack, opacity $duration;
+       }
+       &:hover,
+       &:focus {
+         &:before,
+         &:after {
+           color: $red;
+           opacity: 1;
+           transform: translateY(0);
+         }
+         &:before {
+           transition: transform $duration $easeOutBack, opacity $duration;
+         }
+         &:after {
+           transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+         }
+       }
      }
+
    }
+
+  .current_page_item  {
+
+    a {
+      color: $red;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $red;
+        opacity: 1;
+        transform: translateY(0);
+
+      }
+
+
+      &:hover {
+      &:before {
+          display: none;
+          opacity: 0;
+        }
+      }
+
+         }
+}
 }
 
+.menu-toggle {
+  display: none;
+}
+
+/*-----Hero Info Section*/
+.hero-info {
+  position: relative;
+  padding: 160px 0;
+  text-align: center;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+    .hero-info__inner {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+      }
+
+    * {
+      z-index: 10;
+      font-family: $base-font-family;
+      position: relative;
+      color: #fff;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    h2 {
+      font-size: 118px;
+      font-weight: 900;
+      letter-spacing: 60px;
+      margin-bottom: 40px;
+      line-height: 85px;
+      text-shadow: 7px 4px 2px rgba(0, 0, 0, 0.29);
+    }
+
+    h3 {
+      font-size: 71px;
+      font-weight: 300;
+      line-height: 54px;
+      margin-bottom: 40px;
+      text-shadow: 7px 4px 2px rgba(0, 0, 0, 0.29);
+    }
+
+    h5 {
+      text-align: center;
+
+        span {
+          font-size: 48px;
+          font-weight: 900;
+          position: relative;
+          background: url('images/map-icon.png') no-repeat left center;
+          padding-left: 94px;
+          display: inline-block;
+          letter-spacing: 12px;
+        }
+
+    }
+
+}
+
+
+
+/*---------Map Styles---------------*/
+
+.map {
+  position: relative;
+
+  h2 {
+    color: #df6186;
+    position: absolute;
+    top: 75px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+
+
+
+/*---------Style for Forms---------------*/
+.wpcf7 {
+  background: #90d6be;
+  padding: 45px 0 61px 0;
+  position: relative;
+
+
+  * {
+    z-index: 10;
+    position: relative;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left:0;
+    top: -72px;
+    width: 100%;
+    height: 295px;
+    background: #90d6be;
+    clip-path: polygon(0 24%, 100% 1%, 100% 100%, 0% 100%);
+    z-index: 1;
+  }
+
+
+  form {
+    max-width: 1420px;
+    margin:  0 auto;
+
+    .form-part__line {
+      display: flex;
+      flex-direction: row;
+
+      input, select {
+          min-width: 453px;
+          position: relative;
+      }
+
+      input {
+        margin-right: 30px;
+      }
+
+      select {
+        background: rgba(255,255,255,1) url('images/arrow-drop.png') no-repeat 90% center;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        width: 90px;
+        text-indent: 0.01px;
+        text-overflow: "";
+      }
+
+    }
+
+    .wpcf7-form-control-wrap {
+      margin: 0 0 52px 0;
+      display: flex;
+      line-height: 1px;
+    }
+
+    input, select {
+      border: 2px solid #cccccc;
+      height: 99px;
+      padding: 0 35px;
+      font-family: $base-font-family;
+      background: #fff;
+      border-radius: $border-radius;
+      font-weight: 500;
+      box-sizing: border-box;
+      width: 100%;
+      color: #999999;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-family: $base-font-family;
+
+
+      &:focus {
+        border-color: #479fdf;
+      }
+
+    }
+
+    input[type=submit] {
+      background: #e06287;
+      color: #fff;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+    
+    br {
+      display: none;
+    }
+
+    option {
+      color: #999999;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-family: $base-font-family;
+    }
+
+    span.wpcf7-not-valid-tip {
+      font-size: 16px;
+      font-weight: 500;
+      position: absolute;
+      color: #cc0000;
+      bottom: -20px;
+      text-transform: uppercase;
+
+    }
+
+    textarea {
+      padding: 28px;
+      border-radius: $border-radius;
+      font-weight: 500;
+      width: 100%;
+      border: 2px solid #cccccc;
+      resize: none;
+      height: 251px;
+      box-sizing: border-box;
+      font-family: $base-font-family;
+      background: #fff;
+
+      &:focus {
+        border-color: #479fdf;
+      }
+
+    }
+
+    .form-part__columns {
+      display: flex;
+      flex-direction: row;
+
+      .left-part {
+        margin-right: 30px;
+      }
+
+      .left-part, .right-part {
+        flex-basis: 50%;
+      }
+
+    }
+
+  }
+
+}
+
+
+div.wpcf7-validation-errors {
+  display: none!important;
+}
+form.invalid {
+  .wpcf7-not-valid {
+    color:#cc6699;
+    border-color: #cc6699;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color:#cc6699;
+  }
+
+}
+*:focus {
+  outline: none;
+}
+
+
+/*--------Style for placeholder----------*/
+input::placeholder,
+textarea::placeholder {
+  color: #999999;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: $base-font-family;
+}
+
+
+.agenda {
+  background: #df6186;
+  padding: 86px 0;
+  position: relative;
+
+
+   .agenda__inner {
+      max-width: 1420px;
+      margin:  0 auto;
+      display: flex;
+      flex-direction: row;
+
+     h5 {
+       font-size: 36px;
+       line-height: 26px;
+       color:#363b34;
+       font-weight: 900;
+       font-family: $base-font-family;
+       text-transform: uppercase;
+       margin-bottom: 37px;
+       text-align: center;
+     }
+
+       .agenda-one-info {
+         display: flex;
+         flex-direction: column;
+         border-radius: $border-radius;
+         padding: 28px 24px 72px 36px;
+         margin-right: 30px;
+         box-sizing: border-box;
+         box-shadow: 7px 4px 8px rgba(0, 0, 0, 0.29);
+         opacity: 0;
+         transition: all 0.9s ease-in 0s;
+
+
+
+
+         &:first-child {
+           background: #90d6be;
+         }
+         &:nth-child(2) {
+           background: #479fdf;
+         }
+
+         &:first-child, &:nth-child(2) {
+           width: 25%;
+         }
+         &:last-child {
+           width: 50%;
+           background: #f1b928;
+           margin-right: 0;
+         }
+
+         li {
+           color: #3d3935;
+           margin-bottom: 16px;
+           position: relative;
+           padding-left: 22px;
+           font-size: 16px;
+           line-height: 22px;
+           hyphenate-limit-chars: 10 4 4;
+           word-wrap: break-word;
+
+           &:before {
+             content: '';
+             width: 10px;
+             height: 10px;
+             background: #fff;
+             position: absolute;
+             left: 0;
+             top: 50%;
+             margin: -5px  0 0 -5px;
+           }
+         }
+       }
+
+     .show {
+       opacity: 1;
+     }
+  }
+
+}
+
+
+
+/*----------Footer Styles-----------*/
+footer {
+  background: #f1b928;
+  padding: 75px 0;
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    font-family: $base-font-family;
+  }
+
+}
+
+
+/*----------Media Styles-----------*/
+
+$breakpoint-device: 980px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 640px;
+@media (min-width: $breakpoint-tablet) {
+
+}
+
+
+@media (max-width: $breakpoint-mobile) {
+
+
+  .hero-info  {
+    h2 {
+      font-size: 60px;
+      letter-spacing: normal;
+    }
+  }
+
+
+  h2 {
+    font-size: 40px;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  //form
+
+  .wpcf7 {
+
+    form {
+      padding:  0 20px;
+
+      .form-part__line {
+        display: flex;
+        flex-direction: column;
+
+        input, select {
+          min-width: 100%;
+        }
+
+        input {
+          margin-right: 30px;
+        }
+      }
+
+       .form-part__columns {
+         flex-direction: column;
+
+         .right-part {
+           flex-basis: 100%;
+         }
+         .left-part {
+           flex-basis: 100%;
+           margin-right: 0;
+         }
+       }
+    }
+  }
+  //map
+  .map {
+    h2 {
+      //left: 0;
+      //transform: translate(0, 0);
+    }
+  }
+
+  header  {
+    .header__inner {
+      flex-direction: column;
+
+      .site-branding {
+        flex: 100%;
+        text-align: center;
+      }
+
+      .main-navigation {
+        flex: 100%;
+      }
+
+    }
+
+  }
+
+  //agenda
+  .agenda {
+    .agenda__inner {
+      display: block;
+      padding: 20px;
+
+      .agenda-one-info {
+        width: 100%!important;
+        margin-bottom: 20px;
+      }
+    }
+
+
+  }
+}

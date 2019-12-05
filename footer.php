@@ -13,11 +13,22 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" style="background-color: <?php the_field('background_color', 'option'); ?>">
-        <?php the_field('copyright', 'option'); ?>
+	<footer id="colophon" class="site-footer">
+        <p><?php the_field('copyright', 'option'); ?></p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<script>
+    jQuery(document).ready(function($) {
+        $(window).bind("scroll", function() {
+            if ($(this).scrollTop() > 320) {
+                $(".agenda-one-info").addClass('show')
+            } else {
+                $(".agenda-one-info").removeClass('show')
+            }
+        });
+    });
+</script>
 <?php wp_footer(); ?>
 
 </body>
