@@ -28,8 +28,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 
-
-
 body {
   color: $text-color;
   font-size: $base-font-size;
@@ -282,7 +280,6 @@ header {
 /*---------Style for Forms---------------*/
 .wpcf7 {
   background: #90d6be;
-  padding: 45px 0 61px 0;
   position: relative;
 
 
@@ -307,6 +304,7 @@ header {
   form {
     max-width: 1420px;
     margin:  0 auto;
+    padding: 45px 0 61px 0;
 
     .form-part__line {
       display: flex;

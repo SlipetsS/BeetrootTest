@@ -86,7 +86,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* ðóðÁð║ÐüÐéð¥ð▓Ðïð╣ ÐüÐéð©ð╗Ðî ð¥Ðüð¢ð¥ð▓ð¢ð¥ð╣ Ðçð░ÐüÐéð© */
-/* line 33, sass/style.scss */
+/* line 31, sass/style.scss */
 body {
   color: black;
   font-size: 16px;
@@ -95,13 +95,13 @@ body {
   line-height: 1.6;
 }
 
-/* line 40, sass/style.scss */
+/* line 38, sass/style.scss */
 a {
   text-decoration: none;
   text-underline: none;
 }
 
-/* line 45, sass/style.scss */
+/* line 43, sass/style.scss */
 h1 {
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -113,7 +113,7 @@ h1 {
   line-height: 85px;
 }
 
-/* line 57, sass/style.scss */
+/* line 55, sass/style.scss */
 h2 {
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -126,30 +126,30 @@ h2 {
   margin-bottom: 90px;
 }
 
-/* line 70, sass/style.scss */
+/* line 68, sass/style.scss */
 *:focus {
   outline: none;
 }
 
 /*-------Header Styles-------*/
-/* line 76, sass/style.scss */
+/* line 74, sass/style.scss */
 header {
   background-color: #ffcc33;
   padding: 32px 0;
   border-bottom: 6px solid #d29b0c;
 }
-/* line 81, sass/style.scss */
+/* line 79, sass/style.scss */
 header .header__inner {
   max-width: 1420px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
-/* line 87, sass/style.scss */
+/* line 85, sass/style.scss */
 header .header__inner .site-branding {
   flex: 30%;
 }
-/* line 90, sass/style.scss */
+/* line 88, sass/style.scss */
 header .header__inner .main-navigation {
   flex: 70%;
   display: flex;
@@ -158,13 +158,13 @@ header .header__inner .main-navigation {
 }
 
 /*-------Header Menu Styles-------*/
-/* line 103, sass/style.scss */
+/* line 101, sass/style.scss */
 .nav-menu li {
   display: inline-block;
   margin: 0 14px;
   position: relative;
 }
-/* line 108, sass/style.scss */
+/* line 106, sass/style.scss */
 .nav-menu li a {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
@@ -173,7 +173,7 @@ header .header__inner .main-navigation {
   position: relative;
   text-decoration: none;
 }
-/* line 117, sass/style.scss */
+/* line 115, sass/style.scss */
 .nav-menu li a:before, .nav-menu li a:after {
   content: '';
   position: absolute;
@@ -183,41 +183,41 @@ header .header__inner .main-navigation {
   height: 3px;
   background-color: #a51440;
 }
-/* line 128, sass/style.scss */
+/* line 126, sass/style.scss */
 .nav-menu li a:hover {
   color: #a51440;
 }
-/* line 131, sass/style.scss */
+/* line 129, sass/style.scss */
 .nav-menu li a:before {
   opacity: 0;
   transform: translateY(-8px);
   transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
 }
-/* line 136, sass/style.scss */
+/* line 134, sass/style.scss */
 .nav-menu li a:after {
   opacity: 0;
   transform: translateY(4px);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 }
-/* line 143, sass/style.scss */
+/* line 141, sass/style.scss */
 .nav-menu li a:hover:before, .nav-menu li a:hover:after, .nav-menu li a:focus:before, .nav-menu li a:focus:after {
   color: #a51440;
   opacity: 1;
   transform: translateY(0);
 }
-/* line 149, sass/style.scss */
+/* line 147, sass/style.scss */
 .nav-menu li a:hover:before, .nav-menu li a:focus:before {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 }
-/* line 152, sass/style.scss */
+/* line 150, sass/style.scss */
 .nav-menu li a:hover:after, .nav-menu li a:focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
-/* line 162, sass/style.scss */
+/* line 160, sass/style.scss */
 .nav-menu .current_page_item a {
   color: #a51440;
 }
-/* line 165, sass/style.scss */
+/* line 163, sass/style.scss */
 .nav-menu .current_page_item a:after {
   content: '';
   position: absolute;
@@ -229,19 +229,19 @@ header .header__inner .main-navigation {
   opacity: 1;
   transform: translateY(0);
 }
-/* line 180, sass/style.scss */
+/* line 178, sass/style.scss */
 .nav-menu .current_page_item a:hover:before {
   display: none;
   opacity: 0;
 }
 
-/* line 190, sass/style.scss */
+/* line 188, sass/style.scss */
 .menu-toggle {
   display: none;
 }
 
 /*-----Hero Info Section*/
-/* line 195, sass/style.scss */
+/* line 193, sass/style.scss */
 .hero-info {
   position: relative;
   padding: 175px 0 180px 0;
@@ -252,12 +252,12 @@ header .header__inner .main-navigation {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* line 205, sass/style.scss */
+/* line 203, sass/style.scss */
 .hero-info .hero-info__inner {
   max-width: 1024px;
   margin: 0 auto;
 }
-/* line 210, sass/style.scss */
+/* line 208, sass/style.scss */
 .hero-info:after {
   content: "";
   position: absolute;
@@ -268,7 +268,7 @@ header .header__inner .main-navigation {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-/* line 221, sass/style.scss */
+/* line 219, sass/style.scss */
 .hero-info * {
   z-index: 10;
   font-family: "Roboto", sans-serif;
@@ -277,12 +277,12 @@ header .header__inner .main-navigation {
   text-transform: uppercase;
   font-style: normal;
 }
-/* line 230, sass/style.scss */
+/* line 228, sass/style.scss */
 .hero-info h1 {
   margin-bottom: 46px;
   text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.29);
 }
-/* line 235, sass/style.scss */
+/* line 233, sass/style.scss */
 .hero-info h3 {
   font-size: 4.4rem;
   font-weight: 300;
@@ -290,11 +290,11 @@ header .header__inner .main-navigation {
   margin-bottom: 30px;
   text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.29);
 }
-/* line 244, sass/style.scss */
+/* line 242, sass/style.scss */
 .hero-info h5 {
   text-align: center;
 }
-/* line 247, sass/style.scss */
+/* line 245, sass/style.scss */
 .hero-info h5 span {
   font-size: 3rem;
   font-weight: 900;
@@ -306,11 +306,11 @@ header .header__inner .main-navigation {
 }
 
 /*---------Map Styles---------------*/
-/* line 266, sass/style.scss */
+/* line 264, sass/style.scss */
 .map {
   position: relative;
 }
-/* line 269, sass/style.scss */
+/* line 267, sass/style.scss */
 .map h2 {
   color: #df6186;
   position: absolute;
@@ -321,18 +321,17 @@ header .header__inner .main-navigation {
 }
 
 /*---------Style for Forms---------------*/
-/* line 283, sass/style.scss */
+/* line 281, sass/style.scss */
 .wpcf7 {
   background: #90d6be;
-  padding: 45px 0 61px 0;
   position: relative;
 }
-/* line 289, sass/style.scss */
+/* line 286, sass/style.scss */
 .wpcf7 * {
   z-index: 10;
   position: relative;
 }
-/* line 294, sass/style.scss */
+/* line 291, sass/style.scss */
 .wpcf7:before {
   content: "";
   position: absolute;
@@ -344,26 +343,27 @@ header .header__inner .main-navigation {
   clip-path: polygon(0 24%, 100% 1%, 100% 100%, 0% 100%);
   z-index: 1;
 }
-/* line 307, sass/style.scss */
+/* line 304, sass/style.scss */
 .wpcf7 form {
   max-width: 1420px;
   margin: 0 auto;
+  padding: 45px 0 61px 0;
 }
-/* line 311, sass/style.scss */
+/* line 309, sass/style.scss */
 .wpcf7 form .form-part__line {
   display: flex;
   flex-direction: row;
 }
-/* line 315, sass/style.scss */
+/* line 313, sass/style.scss */
 .wpcf7 form .form-part__line input, .wpcf7 form .form-part__line select {
   min-width: 453px;
   position: relative;
 }
-/* line 320, sass/style.scss */
+/* line 318, sass/style.scss */
 .wpcf7 form .form-part__line input {
   margin-right: 30px;
 }
-/* line 324, sass/style.scss */
+/* line 322, sass/style.scss */
 .wpcf7 form .form-part__line select {
   background: white url("images/arrow-drop.png") no-repeat 90% center;
   appearance: none;
@@ -373,13 +373,13 @@ header .header__inner .main-navigation {
   text-indent: 0.01px;
   text-overflow: "";
 }
-/* line 336, sass/style.scss */
+/* line 334, sass/style.scss */
 .wpcf7 form .wpcf7-form-control-wrap {
   margin: 0 0 52px 0;
   display: flex;
   line-height: 1px;
 }
-/* line 342, sass/style.scss */
+/* line 340, sass/style.scss */
 .wpcf7 form input, .wpcf7 form select {
   border: 2px solid #cccccc;
   height: 99px;
@@ -395,29 +395,29 @@ header .header__inner .main-navigation {
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
-/* line 359, sass/style.scss */
+/* line 357, sass/style.scss */
 .wpcf7 form input:focus, .wpcf7 form select:focus {
   border-color: #479fdf;
 }
-/* line 365, sass/style.scss */
+/* line 363, sass/style.scss */
 .wpcf7 form input[type=submit] {
   background: #e06287;
   color: #fff;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
-/* line 373, sass/style.scss */
+/* line 371, sass/style.scss */
 .wpcf7 form br {
   display: none;
 }
-/* line 377, sass/style.scss */
+/* line 375, sass/style.scss */
 .wpcf7 form option {
   color: #999999;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
-/* line 385, sass/style.scss */
+/* line 383, sass/style.scss */
 .wpcf7 form span.wpcf7-not-valid-tip {
   font-size: 16px;
   font-weight: 500;
@@ -426,7 +426,7 @@ header .header__inner .main-navigation {
   bottom: -20px;
   text-transform: uppercase;
 }
-/* line 395, sass/style.scss */
+/* line 393, sass/style.scss */
 .wpcf7 form textarea {
   padding: 28px;
   border-radius: 8px;
@@ -439,43 +439,43 @@ header .header__inner .main-navigation {
   font-family: "Roboto", sans-serif;
   background: #fff;
 }
-/* line 407, sass/style.scss */
+/* line 405, sass/style.scss */
 .wpcf7 form textarea:focus {
   border-color: #479fdf;
 }
-/* line 413, sass/style.scss */
+/* line 411, sass/style.scss */
 .wpcf7 form .form-part__columns {
   display: flex;
   flex-direction: row;
 }
-/* line 417, sass/style.scss */
+/* line 415, sass/style.scss */
 .wpcf7 form .form-part__columns .left-part {
   margin-right: 30px;
 }
-/* line 421, sass/style.scss */
+/* line 419, sass/style.scss */
 .wpcf7 form .form-part__columns .left-part, .wpcf7 form .form-part__columns .right-part {
   flex-basis: 50%;
 }
 
 /*------------Validation Styles-----------*/
-/* line 432, sass/style.scss */
+/* line 430, sass/style.scss */
 div.wpcf7-validation-errors {
   display: none !important;
 }
 
-/* line 436, sass/style.scss */
+/* line 434, sass/style.scss */
 form.invalid .wpcf7-not-valid {
   color: #cc6699;
   border-color: #cc6699;
 }
-/* line 441, sass/style.scss */
+/* line 439, sass/style.scss */
 form.invalid input::placeholder,
 form.invalid textarea::placeholder {
   color: #cc6699;
 }
 
 /*--------Style for placeholder----------*/
-/* line 451, sass/style.scss */
+/* line 449, sass/style.scss */
 input::placeholder,
 textarea::placeholder {
   color: #999999;
@@ -484,20 +484,20 @@ textarea::placeholder {
   font-family: "Roboto", sans-serif;
 }
 
-/* line 461, sass/style.scss */
+/* line 459, sass/style.scss */
 .agenda {
   background: #df6186;
   padding: 90px 0 130px 0;
   position: relative;
 }
-/* line 467, sass/style.scss */
+/* line 465, sass/style.scss */
 .agenda .agenda__inner {
   max-width: 1420px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
-/* line 473, sass/style.scss */
+/* line 471, sass/style.scss */
 .agenda .agenda__inner h5 {
   font-size: 2.2rem;
   line-height: 26px;
@@ -508,7 +508,7 @@ textarea::placeholder {
   margin-bottom: 32px;
   text-align: center;
 }
-/* line 485, sass/style.scss */
+/* line 483, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info {
   display: flex;
   flex-direction: column;
@@ -520,25 +520,25 @@ textarea::placeholder {
   opacity: 0;
   transition: all 0.9s ease-in 0s;
 }
-/* line 496, sass/style.scss */
+/* line 494, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:first-child {
   background: #90d6be;
 }
-/* line 499, sass/style.scss */
+/* line 497, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:nth-child(2) {
   background: #479fdf;
 }
-/* line 503, sass/style.scss */
+/* line 501, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:first-child, .agenda .agenda__inner .agenda-one-info:nth-child(2) {
   width: 25%;
 }
-/* line 506, sass/style.scss */
+/* line 504, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info:last-child {
   width: 50%;
   background: #f1b928;
   margin-right: 0;
 }
-/* line 512, sass/style.scss */
+/* line 510, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info li {
   color: #3d3935;
   margin-bottom: 16px;
@@ -549,7 +549,7 @@ textarea::placeholder {
   hyphenate-limit-chars: 10 4 4;
   word-wrap: break-word;
 }
-/* line 523, sass/style.scss */
+/* line 521, sass/style.scss */
 .agenda .agenda__inner .agenda-one-info li:before {
   content: '';
   width: 10px;
@@ -560,18 +560,18 @@ textarea::placeholder {
   top: 50%;
   margin: -5px  0 0 -5px;
 }
-/* line 536, sass/style.scss */
+/* line 534, sass/style.scss */
 .agenda .agenda__inner .show {
   opacity: 1;
 }
 
 /*----------Footer Styles-----------*/
-/* line 546, sass/style.scss */
+/* line 544, sass/style.scss */
 footer {
   background: #f1b928;
   padding: 67px 0;
 }
-/* line 550, sass/style.scss */
+/* line 548, sass/style.scss */
 footer p {
   text-align: center;
   text-transform: uppercase;
@@ -583,14 +583,14 @@ footer p {
 
 /*----------Media Styles-----------*/
 @media (max-width: 1200px) {
-  /* line 570, sass/style.scss */
+  /* line 568, sass/style.scss */
   h1 {
     line-height: normal;
     letter-spacing: normal;
     font-size: 5rem;
   }
 
-  /* line 575, sass/style.scss */
+  /* line 573, sass/style.scss */
   h2 {
     font-size: 2.5rem;
     line-height: normal;
@@ -599,118 +599,118 @@ footer p {
   }
 
   /*------Header Styles-----*/
-  /* line 584, sass/style.scss */
+  /* line 582, sass/style.scss */
   header {
     padding-left: 20px;
     padding-right: 20px;
   }
 
   /*------Form Styles-----*/
-  /* line 589, sass/style.scss */
+  /* line 587, sass/style.scss */
   .wpcf7 {
     padding: 20px;
   }
-  /* line 592, sass/style.scss */
+  /* line 590, sass/style.scss */
   .wpcf7 h2 {
     font-size: 2rem;
   }
-  /* line 598, sass/style.scss */
+  /* line 596, sass/style.scss */
   .wpcf7 form .form-part__line {
     display: flex;
     flex-direction: column;
   }
-  /* line 602, sass/style.scss */
+  /* line 600, sass/style.scss */
   .wpcf7 form .form-part__line input, .wpcf7 form .form-part__line select {
     min-width: 100%;
   }
-  /* line 606, sass/style.scss */
+  /* line 604, sass/style.scss */
   .wpcf7 form .form-part__line input {
     margin-right: 30px;
   }
-  /* line 611, sass/style.scss */
+  /* line 609, sass/style.scss */
   .wpcf7 form .form-part__columns {
     flex-direction: column;
   }
-  /* line 614, sass/style.scss */
+  /* line 612, sass/style.scss */
   .wpcf7 form .form-part__columns .right-part {
     flex-basis: 100%;
   }
-  /* line 617, sass/style.scss */
+  /* line 615, sass/style.scss */
   .wpcf7 form .form-part__columns .left-part {
     flex-basis: 100%;
     margin-right: 0;
   }
 
   /*------Agenda Styles-----*/
-  /* line 628, sass/style.scss */
+  /* line 626, sass/style.scss */
   .agenda .agenda__inner {
     display: block;
     padding: 20px;
   }
-  /* line 632, sass/style.scss */
+  /* line 630, sass/style.scss */
   .agenda .agenda__inner .agenda-one-info {
     width: 100% !important;
     margin-bottom: 20px;
   }
-  /* line 636, sass/style.scss */
+  /* line 634, sass/style.scss */
   .agenda .agenda__inner h2 {
     margin-bottom: 20px;
   }
 }
 @media (max-width: 640px) {
-  /* line 647, sass/style.scss */
+  /* line 645, sass/style.scss */
   h1 {
     font-size: 3rem;
   }
 
-  /* line 650, sass/style.scss */
+  /* line 648, sass/style.scss */
   h2 {
     font-size: 2.5rem;
   }
 
   /*------Hero Info Styles-----*/
-  /* line 656, sass/style.scss */
+  /* line 654, sass/style.scss */
   .hero-info h2 {
     font-size: 3.75rem;
     letter-spacing: normal;
     margin-bottom: 20px;
   }
-  /* line 662, sass/style.scss */
+  /* line 660, sass/style.scss */
   .hero-info h3 {
     font-size: 2.4rem;
   }
-  /* line 666, sass/style.scss */
+  /* line 664, sass/style.scss */
   .hero-info h5 span {
     font-size: 1.5rem;
   }
 
   /*------Agenda Styles-----*/
-  /* line 673, sass/style.scss */
+  /* line 671, sass/style.scss */
   .agenda {
     padding: 20px 0 80px 0;
   }
 
   /*------Header Styles-----*/
-  /* line 681, sass/style.scss */
+  /* line 679, sass/style.scss */
   header .header__inner {
     flex-direction: column;
   }
-  /* line 684, sass/style.scss */
+  /* line 682, sass/style.scss */
   header .header__inner .site-branding {
     flex: 100%;
     text-align: center;
   }
-  /* line 689, sass/style.scss */
+  /* line 687, sass/style.scss */
   header .header__inner .main-navigation {
     flex: 100%;
   }
 
   /*------Footer Styles-----*/
-  /* line 697, sass/style.scss */
+  /* line 695, sass/style.scss */
   footer {
     padding: 30px 10px;
   }
-  /* line 699, sass/style.scss */
+  /* line 697, sass/style.scss */
   footer p {
     font-size: 1rem;
   }
