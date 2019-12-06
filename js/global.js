@@ -15,8 +15,8 @@ jQuery(document).ready(function($) {
         $('body,html').animate({scrollTop: top}, 1500);
     });
 
-    $('.nav-menu li a').on('click', function(){
-        $('#menu li.current_page_item').removeClass('current_page_item');
+    $('.nav-menu li').on('click', function(){
+        $('.nav-menu li').removeClass('current_page_item');
         $(this).addClass('current_page_item');
     });
 
